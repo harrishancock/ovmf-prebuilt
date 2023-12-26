@@ -48,7 +48,7 @@ impl Release {
     /// Push the tarball as a new release.
     fn push(&self) -> Result<()> {
         let release_notes = format!(
-            "edk2 tag: https://github.com/tianocore/edk2/releases/tag/{}",
+            "edk2 tag: https://github.com/harrishancock/edk2/releases/tag/{}",
             self.edk2_git_tag
         );
 
