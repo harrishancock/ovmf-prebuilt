@@ -48,6 +48,7 @@ RUN . venv/bin/activate && stuart_setup ${stuart_opts} && stuart_update ${stuart
 
 # Build X64.
 ENV stuart_opts="-c OvmfPkg/PlatformCI/PlatformBuild.py -a X64 Target=${build_target} TOOL_CHAIN_TAG=${toolchain} BLD_*_NETWORK_TLS_ENABLE=1 BLD_*_NETWORK_HTTP_ENABLE=1 BLD_*_TPM1_ENABLE=1 BLD_*_TPM2_ENABLE=1"
+ENV build_target=DEBUG
 RUN . venv/bin/activate && stuart_setup ${stuart_opts} && stuart_update ${stuart_opts} && stuart_build ${stuart_opts}
 
 # Create the output bin dir.
